@@ -1,0 +1,39 @@
+:root{
+    --veryDarkDesaturatedBlueBackground: hsl(222, 26%, 31%);
+    --veryDarkDesaturatedBlueKeyboard: hsl(223, 31%, 20%);
+    --veryDarkDesaturatedBlueDisplay: hsl(224, 36%, 15%);
+    --desaturatedDarkBlueDelete: hsl(225, 21%, 49%);
+    --desaturatedDarkBlueDeleteShadow: hsl(224, 28%, 35%);
+    --redEqual: hsl(6, 63%, 50%);
+    --darkredEqualShadow: hsl(6, 70%, 34%);
+    --lightgrayishorangeNumber: hsl(30, 25%, 89%);
+    --grayishOrangeNumberShadow: hsl(28, 16%, 65%);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 90vh;
+}
+.header{
+    width: 35%;
+    height: 80px;
+    border: 1px solid black;
+}
+.display{
+    width: 35%;
+    height: 100px;
+    border: 1px solid black;
+}
+.numericKeyboard{
+    width: 35%;
+    height: 400px;
+    border: 1px solid black;
+}
