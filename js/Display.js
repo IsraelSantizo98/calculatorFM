@@ -7,6 +7,12 @@ class Display{
         //NUmero que se estan guardando
         this.valorActual = '';
         this.valorAnterior = '';
+        this.signos = {
+            sumar: '+',
+            dividir: '/',
+            multiplicar: '*',
+            restar: '-',
+        }
     }
     borrar(){
         this.valorActual = this.valorActual.toString().slice(0,-1);
@@ -17,6 +23,14 @@ class Display{
         this.valorActual = '';
         this.valorAnterior = '';
         this.tipoOperacion = undefined;
+        this.imprimirValores();
+    }
+    computar(tipo){
+        this.tipoOperacion !== 'igual' && this.calcular();
+        this.tipoOperacion = tipo;
+        //Si el valor anterior se transforma en el valor actual se actualiza pero si no lo hace queda igual el valor anterior como valor anterior
+        this.valorAnterior = this.valorActual || this.valorAnterior;
+        this.valorActual = '';
         this.imprimirValores();
     }
     //Colocar un numero en display
@@ -30,14 +44,14 @@ class Display{
     //Impresion de valores
     imprimirValores(){
         this.displayValorActual.textContent = this.valorActual;
-        this.displayValorAnterior.textContent = this.valorAnterior;
+        this.displayValorAnterior.textContent = `${this.valorAnterior} ${this.signos[this.tipoOperacion] || ''}`;
     }
-    calcular(){
+    calcular() {
         //Esto hace que pase de string que anteriormente lo usamos y que regrese a ser un numero
         const valorAnterior = parseFloat(this.valorAnterior);
         const valorActual = parseFloat(this.valorActual);
-        //
-        if(isNaN(valorActual) || isNaN(valorAnterior)) return
-        this.valorActual = this.calculador[this.tipoOperacion] (valorAnterior, this.valorActual);
+
+        if( isNaN(valorActual)  || isNaN(valorAnterior) ) return
+        this.valorActual = this.calculador[this.tipoOperacion](valorAnterior, valorActual);
     }
 }
