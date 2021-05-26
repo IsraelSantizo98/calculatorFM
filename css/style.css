@@ -9,6 +9,10 @@
     --darkredEqualShadow: hsl(6, 70%, 34%);
     --lightgrayishorangeNumber: hsl(30, 25%, 89%);
     --grayishOrangeNumberShadow: hsl(28, 16%, 65%);
+    /*Texto*/
+    --lightYellow: hsl(52, 100%, 62%);
+    --veryDarkBlue: hsl(198, 20%, 13%);
+    --whiteText: hsl(0, 0, 100%);
 }
 *{
     margin: 0;
@@ -50,6 +54,18 @@ body{
     border-radius: 10px;
     padding: 10px;
     background: var(--veryDarkDesaturatedBlueDisplay);
+    color: white;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.pantallaInferior, .pantallaSuperior{
+    text-align: end;
+}
+.pantallaInferior{
+    font-size: 15px;
 }
 .numericKeyboard{
     width: 400px;
@@ -64,6 +80,9 @@ body{
 }
 .key{
     margin: 12px;
+    font-size: 20px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
     border: 1px solid black;
     border-radius: 10px;
     /* text-align: center; */
