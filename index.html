@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/Calculadora.js" type="text/javascript"></script>
+  <script src="js/main.js" defer></script>
   <title>Frontend Mentor | Calculator app</title>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,31 +17,39 @@
 <body>
   <div class="container">   
       <div class="header"></div>
-      <div class="display"></div>
+      <div class="display" id="pantalla">
+        <div class="pantallaSuperior" id="valor-anterior">
+          45646+65465
+        </div>
+        <div class="pantallaInferior" id="valor-actual">
+          54465+6546
+        </div>
+      </div>
       <div class="numericKeyboard">
-        <div class="number1 key">1</div>
-        <div class="number2 key">2</div>
-        <div class="number3 key">3</div>
-        <div class="number4 key">4</div>
-        <div class="number5 key">5</div>
-        <div class="number6 key">6</div>
-        <div class="number7 key">7</div>
-        <div class="number8 key">8</div>
-        <div class="number9 key">9</div>
-        <div class="number0 key">0</div>
-        <div class="number+ key">+</div>
-        <div class="number- key">-</div>
-        <div class="number* key">*</div>
-        <div class="number/ key">/</div>
-        <div class="numberDot key">.</div>
-        <div class="numberReset key">Reset</div>
-        <div class="numberEqual key">=</div>
-        <div class="numberDelete key">Del</div>
+        <button class="number key">1</button>
+        <button class="number key">2</button>
+        <button class="number key">3</button>
+        <button class="number key">4</button>
+        <button class="number key">5</button>
+        <button class="number key">6</button>
+        <button class="number key">7</button>
+        <button class="number key">8</button>
+        <button class="number key">9</button>
+        <button class="number key">0</button>
+        <button class="operador key">+</button>
+        <button class="operador key">-</button>
+        <button class="operador key">*</button>
+        <button class="operador key">/</button>
+        <button class="number key">.</button>
+        <button class="numberReset key">Reset</button>
+        <button class="operador key">=</button>
+        <button class="numberDelete key">&larr;</button>
       </div>
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Isreal Santizo</a>.
   </div>
+  
 </body>
 </html>
